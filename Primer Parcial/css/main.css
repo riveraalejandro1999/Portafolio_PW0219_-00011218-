@@ -20,7 +20,9 @@ body {
 
 .header {
     display: flex;
-    justify-content: space-between
+    justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 5ch
 }
 
 .src-only {
@@ -85,6 +87,7 @@ a.hide-mobile.show-desktop{
     font-size: 8em;
     color:#0AC693
 }
+
 /* Social links*/
 .social-links{
     list-style: none;
@@ -209,6 +212,44 @@ a.hide-mobile.show-desktop{
     font-size: 1em;
     width: 100%;
 }
+/*AGREGANDO EL FLEX PARA QUE SEAN 2 COLUMNAS
+Y AGREGANDO EL BIO-INFO Y CONTACT*/
+
+.about .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+    margin-top: -3.2em;
+    margin-bottom:3em;
+}
+
+.bio-info{
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    grid-gap: 5px;
+    justify-items: center;
+    align-content: center;
+}
+
+.contact {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    align-content: center;
+}
+
+/*Se le agrega el grid*/
+.about h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.125em;
+    margin: 2em;
+    display: grid; 
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    align-content: center
+}
 
 /* Decorando placeholder */
 
@@ -226,7 +267,8 @@ a.hide-mobile.show-desktop{
     background-color: #F74442;
     font-weight: 400;
     color: white;
-    font-size: 1rem;
+    font-size: 1.3em;
+    width: 10em;
 }
 
 .black-decoration{
@@ -323,7 +365,21 @@ footer .social-links {
 
 
 }
+/*Se agrega una media query con el tama;o de la pantalla de iPhone**/
+@media only screen and (max-width: 750px) {
 
+    .about .container{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 0.75em;
+        margin-right: 0.75em;
+    }
+    }
 @media only screen and (min-width: 1440px) {
 
     /*TODO: FALTA CSS */
@@ -333,3 +389,18 @@ footer .social-links {
         max-width: 1440px;
     }
 }
+
+a.hide-mobile.show-desktop{
+    margin-top: -1em;
+    margin-bottom: 0.5em;
+    justify-content: center;
+    font-size: 8em;
+    color:#0AC693
+}
+
+
+/*Se le agrega color rojo al menu */
+.menu li a:hover{
+    color: red;
+}
+
