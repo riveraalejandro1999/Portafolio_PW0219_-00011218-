@@ -52,10 +52,12 @@ p{
     top: 30%;
     right: 95%;
     font-size: 1.5rem;
-
+/*Agrego un row reverse y un magin top 0.2em*/
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    flex-direction: row-reverse;
+    margin-top: 0.2em;
 
 }
 .options i:last-child {
@@ -89,16 +91,17 @@ a.hide-mobile.show-desktop{
 }
 
 /* Social links*/
+/*Agrego un margin top y bottom para arreglar la distribucion de imagenes*/
 .social-links{
     list-style: none;
     padding:0;
     margin-top:  -5em;
-    margin-bottom:3em;
+    margin-bottom:4em;
     display: flex;
     flex-direction: row;
     justify-content:center;    
 }
-
+/*Se agrego un margin-left de 25 px*/
 .social-links li a{
     color: rgb(225, 215, 230);
     text-decoration: none;
@@ -212,9 +215,8 @@ a.hide-mobile.show-desktop{
     font-size: 1em;
     width: 100%;
 }
-/*AGREGANDO EL FLEX PARA QUE SEAN 2 COLUMNAS
-Y AGREGANDO EL BIO-INFO Y CONTACT*/
-
+/*Agrego un grid para que sean dos columnas y su a ves agrego el bio info y contact*/
+/*Parte del formulario*/
 .about .container{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -262,12 +264,13 @@ Y AGREGANDO EL BIO-INFO Y CONTACT*/
 ::-moz-placeholder { /* Firefox 19+ */ color: #D7DEE6; } 
  
 :-ms-input-placeholder { color: #D7DEE6; }
-
+/*Agrego un width para cambiar el tamaño del boton de contacto*/
+/*Cambio el font size a 1rem*/
 .contact-form input[type=submit] {
     background-color: #F74442;
     font-weight: 400;
     color: white;
-    font-size: 1.3em;
+    font-size: 1rem;
     width: 10em;
 }
 
@@ -379,6 +382,21 @@ footer .social-links {
         margin-left: 0.75em;
         margin-right: 0.75em;
     }
+    /*Agrego la x en la version de telefono*/
+    .options i:last-child {
+        font-size: 3rem;
+        display: flex;
+        color: FFFFF;
+        padding-top: 0.1em;
+    }
+
+/*cambiando margin a 50em*/
+    .fa-fas-bar{
+        margin-left: 50em;
+        font-size: 50px;
+        align-content: center;
+    }
+
     }
 @media only screen and (min-width: 1440px) {
 
