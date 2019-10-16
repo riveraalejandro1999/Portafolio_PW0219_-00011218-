@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link  rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />>
+    <title>Registro de actividades</title>
+</head>
+<body>
+    <div class="container">
+        <br>
+        <div class="jumbotron">
+            <h1>
+                Registro de actividad
+            </h1>
+
+            <div class="form-group">
+                <label for="evento" class="col-sm-2 col-form-label">Ingrese la actividad: </label><br>
+                <input class="form-control" type="text" name="evento" id="evento_field">
+            </div>
+
+            <div class="form-group">
+                <label for="dia">Seleccione el dia:</label>
+                <select name="dia" class="form-control" id="dia_field">
+                    <option>Lunes</option>
+                    <option>Martes</option>
+                    <option>Miércoles</option>
+                    <option>Jueves</option>
+                    <option>Viernes</option>
+                </select>
+            </div>
+            <div class="form-group">
+                    <div class="custom-control custom-switch">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="late_switch"
+                      />
+                      <label class="custom-control-label" for="late_switch"
+                        >¿La actividad fue buena?</label
+                      >
+                    </div>
+                  </div>
+          
+           
+
+            <div class="form-group">
+                <button type="button" class="btn btn-danger" id="submit_btn" >Ingresar</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <section>
+            <table class="table table-hover">
+                <thead>
+                    <tr class="table-dark">
+                        <th scope="col">Evento</th>
+                        <th scope="col">Dia de la actividad</th>
+                        <th scope="col">Hora de ingreso de la actividad al sistema</th>
+                        <th scope="col">Estado de actividad</th>
+                    </tr>
+                </thead>
+                <tbody id="table_body">
+
+                </tbody>
+            </table>
+        </section>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
